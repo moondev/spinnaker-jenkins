@@ -42,9 +42,6 @@ spec:
         - name: spinnaker-config
           mountPath: /root/.kube/config
           subPath: kube.config
-        command: ["bash"]
-        args: ["-c", "cd /usr/local/bin; curl -LO https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/linux/amd64/kubectl; chmod +x kubectl; /opt/clouddriver/bin/clouddriver"]
-
       - image: lachlanevenson/k8s-kubectl:latest
         name: kubectl
         ports:
