@@ -22,17 +22,17 @@ node {
         sh "./apply.sh manifests/orca.yaml quay.io/spinnaker/orca:v1.304.0"
         sh "kubectl rollout status deployment/orca"
 
-    stage "Deploy echo"
-        sh "./apply.sh manifests/echo.yaml quay.io/spinnaker/echo:v1.132.0"
-        sh "kubectl rollout status deployment/echo"
+    // stage "Deploy echo"
+    //     sh "./apply.sh manifests/echo.yaml quay.io/spinnaker/echo:v1.132.0"
+    //     sh "kubectl rollout status deployment/echo"
 
     stage "Deploy gate"
         sh "./apply.sh manifests/gate.yaml quay.io/spinnaker/gate:v3.1.0"
         sh "kubectl rollout status deployment/gate"
 
-    stage "Deploy igor"
-        sh "./apply.sh manifests/igor.yaml quay.io/spinnaker/igor:v1.64.0"
-        sh "kubectl rollout status deployment/igor"
+    // stage "Deploy igor"
+    //     sh "./apply.sh manifests/igor.yaml quay.io/spinnaker/igor:v1.64.0"
+    //     sh "kubectl rollout status deployment/igor"
 
     stage "Deploy deck"
         sh "./apply.sh manifests/deck.yaml quay.io/spinnaker/deck:v2.1028.0"
